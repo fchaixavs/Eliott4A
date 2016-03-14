@@ -1,0 +1,105 @@
+\usepackage{%
+	lipsum, % Pour inserer du « Lorem ipsum » quand on sait pas quoi dire
+	microtype, % Pour une meilleure micro-typographie
+	xspace, % Pour éviter qu'une espace soit mangée à la fin des comandes
+	%multicol
+	lettrine, % Parce que je trouve que c'est grave la classe
+    graphicx,
+    %minted,
+    fancyvrb,
+    color,
+    enumerate
+    %moreverb
+	}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fuck la police (de caractère, hein !) %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fontspec}
+    \setmainfont[%
+	Numbers=OldStyle, % Nombres à l’ancienne
+	Ligatures={ % Les ligatures. Je ne suis pas certain que Libertine les supporte
+		TeX,	% toutes, mais bon…
+		Common,
+		%Rare,
+		%Historical
+		}
+	]{Linux Libertine O} % Police principale. Oui, j'aime les (polices) libertine.
+    %\setmonofont{Ubuntu Mono} % La police à chasse fixe pour le code
+    \setsansfont{Linux Biolinum O} % La police sans empattement pour les titres
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% La définition de DIV, dans le cas de calc, doit se déclarer après la			%
+% déclaration de la police. Ça permet à KOMA-script (la classe du document) de	%
+% calculer automatiquement la taille des colonnes, en fonction de la taille de	%
+% la police, pour que les lignes soient optimisées pour le meilleur confort de	%
+% lecture.																		%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\KOMAoptions{DIV=12} 
+\KOMAoptions{DIV=calc} 
+
+\usepackage[%
+    hidelinks=true
+    colorlinks=false
+    pdfauthor={Illyse},
+    %pdftitle={Document de travail — recherches biblio François Chaix},
+    pdfdisplaydoctitle=true, % Display document title instead of filename in title bar
+    pdfsubject={plop},
+    pdfkeywords={plop},
+    pdfproducer={LuaTeX, avec le package hyperref},
+    pdfcreator={LuaTex},
+    linktocpage=false,
+    pdfinfo={coincoin},
+    pdflang={fr-FR},
+    unicode=true,
+    verbose=true
+    ]{hyperref}
+
+% Profondeur de \subsubsection = 3
+\setcounter{tocdepth}{3}     % Dans la table des matieres
+\setcounter{secnumdepth}{3}  % Avec un numero.
+
+
+% Babel se déclare à la fin, car il doit s’appliquer à tous les autres packages
+\usepackage[main=frenchb]{babel}
+
+% Fonctions
+
+% \newcommand{\notion}[1]{.......................}
+\newcommand{\notion}[1]{\emph{#1}}
+
+\newenvironment{attention}
+    {\begin{quote}
+    \vspace{1cm}
+    \color{red}
+    \textbf{Attention~:}\\}
+    {\end{quote}}
+\newenvironment{plusloin}
+    {\begin{quote}
+    \hrule
+    \vspace{1cm}
+    \textbf{Pour aller plus loin~:}\\}
+    {\end{quote}}
+\newenvironment{exemple}
+    {\begin{quote}
+    % \vspace{1cm}
+    \textbf{Exemple~:}\\}
+    {\end{quote}}
+% \usepackage{fancyvrb,xcolor}
+% \newsavebox{\FVerbBox}
+% \newenvironment{plusloin}
+%  {\VerbatimEnvironment
+%   \begin{center}
+%   \vspace{1ex} % additional space above the frame
+%   \begin{lrbox}{\FVerbBox}
+%   \begin{minipage}{4.5in}
+%   \vspace*{4ex} % additional space before the verbatim material
+%   %\begin{Verbatim}
+%   }
+%  {%\end{Verbatim}
+%   \vspace{1ex} % additional space after the verbatim material
+%   \end{minipage}
+%   \end{lrbox}
+%   \fcolorbox{blue!30}{gray!7}{\usebox{\FVerbBox}}
+%   \vspace{1ex} % additional space after the frame
+%   \end{center}}
