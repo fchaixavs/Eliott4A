@@ -3,10 +3,11 @@
 	twocolumn=false,
 	12pts,
 	DIV=calc]%
-	{scrartcl}
+	{article}
 \usepackage{config}
 
 \title{Chapitre 7 : Calcul littéral}
+\date{}
 \begin{document}
 \maketitle
 \section*{Activité du dallage}
@@ -25,8 +26,8 @@ Ces expressions littérals permettent :
 
 \begin{itemize}
 	\item d’établir des formules (voir les formules d’aires)
-	\item d’exprimer \og en fonction de\fg
-	[figure rectangle : Caption = "Le périmètre du rectangle ABCD en fonction de x est : $pABCD = 7 + 4x + 7 + 4x = 14 + 8x$"]
+	\item d’exprimer "en fonction de"
+	[figure rectangle : Caption = "Le périmètre du rectangle ABCD en fonction de x est : $P_{ABCD} = 7 + 4x + 7 + 4x = 14 + 8x$"]
 	\item de résoudre des problèmes
 	\begin{itemize}
 		\item dallage de la piscine
@@ -37,7 +38,7 @@ Ces expressions littérals permettent :
 \section{Transformation d'écritures littérales}
 \subsection{Convention}
 On peut supprimer le signe de la \emph{multiplication} entre :
-\begin{itemize}
+\begin{description}
 	\item 2 lettres : $a \times b = ab$ ou $x \times x = x^2$ ou $x \times x \times x = x^3$
 	\item 1 nombre et 1 lettre :\\
 		$5 \times y=5 y =y \times 5$\\
@@ -46,7 +47,7 @@ On peut supprimer le signe de la \emph{multiplication} entre :
 		ou $x \times −1=−1 \times x=−1 x=−x$\\
 	\item 1 nombre et 1 parenthèse : $3 \times (2+x)=3(2+x)$
 	\item 2 parenthèses : $(a+b) \times (c +d)=(a+b)(c+ d)$
-\end{itemize}
+\end{description}
 
 \begin{attention}
 Pas de suppression entre 2 nombres !! $7×3 \neq 73$
@@ -59,8 +60,112 @@ Pas de suppression entre 2 nombres !! $7×3 \neq 73$
 \paragraph{Exemple}
 \begin{itemize}%[.]%[label=\textbullet]
 	\item $2 \times +3 x=5 x$ mais $2 x +3 y$ ne peut pas se réduire.
-	\item $4 x−3+7 x^2 −7+9 x^2 −10 x=−6 x−10+16 x^2$
-	\item $2 x\times 4 x \times 5=2 \times x \times 4\times x\times 5=2\times 4\times 5\times x\times x=40\times x =40 x^2$
+	\item \begin{math}
+	4 x−3+7 x^2 −7+9 x^2 −10 x\\
+	=−6 x−10+16 x^2
+	\end{math}
+	\item 
+		\begin{math}
+		2 x\times 4 x \times 5 \\
+		=2 \times x \times 4\times x\times 5\\
+		=2\times 4\times 5\times x\times x\\
+		=40\times x \\
+		=40 x^2
+		\end{math}
+	\item
+		\begin{math}
+		3 x \times 2x^2 \\
+		=3\times 2\times x\times x\\
+		=6 \times x 3
+		\end{math}
 \end{itemize}
 
+\begin{attention}
+Attention !!! 3 x +2 x 2 ne se réduit pas !
+\end{attention}
+
+\subsection{Calcul de la valeur d’une expression littérale}
+
+Calculer la valeur d’une expression littérale, c’est remplacer la lettre par une valeur
+numérique. Il est souvent plus judicieux de coisir la forme la plus réduite avant de faire les
+calculs..
+
+\paragraph{Exemples}
+\begin{itemize}
+	\item
+	Soit $A=2+5 x +8−12 x +2 x^2$ Calculer A pour $x=-3$\\On déduit :\\
+		\begin{math}
+		A=2+5 x +8−12 x +2 x^2 \\
+		=10−7 x+2 x^2
+	\end{math}
+	\item Pour $x=-3$\\ 
+		\begin{math}
+		A=10−7×(−3)+2×(−3)\\
+A=10−7×(−3)+2×9\\
+A=10−(−21)+18\\
+A=10+21+18=49
+		\end{math}
+\end{itemize}
+
+\section{Développement}
+
+\subsection{Calcul de la valeur d’une expression littérale}
+
+Calculer la valeur d’une expression littérale, c’est remplacer la lettre par une valeur
+numérique. Il est souvent plus judicieux de coisir la forme la plus réduite avant de faire les
+calculs.
+
+\paragraph{propriété}\emph{addition et parenthèses.}\\
+Dans une suite d'\emph{additions} et de \emph{soustractions}, on peut supprimer des parenthèses précédées d'un signe <<$+$>> en conservant les signes des termes \emph{intérieurs} aux parenthèses.
+
+\paragraph{exemple} 
+\begin{math}
+7x + (6-2xy)+(-4x+3y)\\
+= 7x+6-2xy-4x+3y\\
+= 3x+6-2xy+3y
+\end{math}
+
+\paragraph{Propriété}\emph{soustraction et parenthèses}\\
+Dans une suite d'additions et de soustractions, on peut supprimer des parenthèses précédées par un signe <<$-$>> en \emph{changeant} les signes des termes \emph{intérieurs} aux parenthèses.
+
+\paragraph{Exemples:}
+\begin{itemize}
+	\item
+		\begin{math}
+		3x-(x+3) \\
+		= 3x-x-3 \\
+		= 2x-3
+		\end{math}
+	\item
+		\begin{math}
+		9x^2+4-(-2x^2+4x-5) \\
+		= 9x^2+4+2x^2-4x+5 \\
+		= 11x^2+9-4x
+		\end{math}
+\end{itemize}
+
+\paragraph{Propriété:}\emph{la double distributivité}\\
+(Voir 7 c) P.28)\\
+Pour tous les nombres a, b, c et d :
+	\begin{math}
+	(a+b) \times (c+d) \\
+	= a \times c + a \times d + b\times c + b\times d
+	\end{math}
+\paragraph{Exemples}
+\begin{itemize}
+\item
+\begin{math}
+	(3x + 4)(x+2)\\
+	= 3x\times x + 3x\times 2 + 4x + 4\times 2\\
+	= 3x^2 + 6x + 4x + 8\\
+	= 3x^2 + 10x + 8
+\end{math}
+\item
+\begin{math}
+	(2x-4)(-3x+7)\\
+	= 2x \times -3x + 2x \times 7 -4 \times (-3x) -4\times 7\\
+	= -6x^2 + 14x + 12x -28\\
+	=-6x^2 + 26x - 28
+\end{math}
+\end{itemize}
 \end{document}
